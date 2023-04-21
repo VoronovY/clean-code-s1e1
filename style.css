@@ -1,16 +1,3 @@
-/* Reset style */
-ul {
-  margin: 0;
-  padding: 0px;
-}
-li,
-h3 {
-  list-style: none;
-}
-input,
-button{
-  outline: none;
-}
 /* Basic Style */
 .todo-app {
   background-color: #f8f8f8;
@@ -23,11 +10,19 @@ button{
   display: block;
   text-align: right;
 }
-.info .info-img {
+.info__img {
   width: 100%;
 }
-.info .more-info {
+.info__link {
   font-family: fantasy, cursive;
+}
+.task-list {
+  margin: 0;
+  padding: 0px;
+}
+.title,
+.list-item {
+  list-style: none;
 }
 
 @media (max-width: 768px) {
@@ -42,13 +37,14 @@ button{
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.task-label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.task-row {
   display: flex;
+  padding-top: 20px;
 }
 .btn {
   background: none;
@@ -58,6 +54,7 @@ button{
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  outline: none;
 }
 .btn:hover {
   color: #3a3a3a;
@@ -83,21 +80,29 @@ button{
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+  outline: none;
 }
 .text-input:focus {
   color: #333;
 }
 
 /* New Task */
-.new-task-title {
+.add-task__title {
   display: block;
-  margin: 0 0 20px;
 }
-#new-task {
+.task-row__input {
   width: 318px;
+  display: block;
 }
 
 /* Task list */
+.tasks-list {
+  margin: 0;
+  padding: 0;
+}
 .list-item {
   overflow: hidden;
   padding: 20px 0;
@@ -107,47 +112,49 @@ button{
   justify-content: space-between;
   align-items: center;
 }
+.checkbox {
+  outline: none;
+  margin: 0;
+  width: 30px;
+}
 .list-item > * {
   vertical-align: middle;
 }
 
-.list-item > .checkbox {
-  margin: 0 10px;
-}
-.list-item > .task {
+.task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.list-item >    .text-input {
+.text-input {
   width: 226px;
 }
-.btn.delete-btn .delete-icon {
+.delete-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.btn.delete-btn .delete-icon:hover {
+.delete-icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#completed-tasks .task {
+.task-label_completed {
     text-decoration: line-through;
     color: #888;
   }
 
 /* Edit Task */
-.tasks-list .list-item .text-input {
+.list-item__input {
   display: none;
 }
 
-.tasks-list .list-item.edit-mode .text-input {
+.list-item__input_edit {
   display: inline-block;
   width: 224px;
 }
 
-.tasks-list .list-item.edit-mode .edit-task {
+.task-label_edit {
   display: none;
 }
