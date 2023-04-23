@@ -4,22 +4,22 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.information {
+.info {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.information img {
+.info img {
   width: 100%;
 }
-.information .more-information {
+.info .more-info {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .information {
+  .info {
     text-align: center;
   }
 
@@ -121,12 +121,12 @@ li > label {
 li >    input[type="text"] {
   width: 226px
 }
-button.delete-button img {
+button.delete-btn img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete-button img:hover {
+button.delete-btn img:hover {
   transform: rotateZ(0);
 }
 
